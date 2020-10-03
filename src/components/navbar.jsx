@@ -21,6 +21,9 @@ export default function Navbar() {
         <nav className="navbar-div">
           <ul className="side-nav-ul">
             <Link className="side-nav-link" to="/">
+              <p className="side-nav-li">Informance</p>
+            </Link>
+            <Link className="side-nav-link" to="/">
               <HomeIcon fontSize="large" className="nav-icon" />
               <p className="side-nav-li">Home</p>
             </Link>
