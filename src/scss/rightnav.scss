@@ -1,4 +1,51 @@
 .side-rightnav-li {
   color: white;
+  display: flex;
+  width: 100%;
+  font-size: 22px;
 }
 
+.side-rightnav-li:hover {
+  background-color: white;
+}
+
+.side-rightnav-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.right-nav-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-nav-div {
+  position: sticky;
+  top: 0;
+}
+
+.rightnav-search-container {
+  width: 80%;
+  height: 45px;
+  border-radius: 40px;
+  background-color: #3A3B3C;
+  color: #E4E6EB;
+}
+
+.rightnav-input {
+  width: 80%;
+  height: 45px;
+  padding: 0px 25px;
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 18px;
+  border-radius: 40px;
+}
+
+.rightnav-input:focus {
+  border: 1px solid crimson;
+  background-color: #1C1C1C;
+}

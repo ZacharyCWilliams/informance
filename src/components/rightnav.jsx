@@ -6,6 +6,9 @@ import {
   Link
 } from "react-router-dom";
 import '../scss/rightnav.scss';
+import SearchIcon from "@material-ui/icons/Search";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ForumIcon from "@material-ui/icons/Forum";
 
 
 export default function RightNav() {
@@ -14,15 +17,22 @@ export default function RightNav() {
       <div className="right-nav-container">
         <nav className="right-nav-div">
           <ul className="side-rightnav-ul">
-            <div>
-              <input type="text" placeholder="Search Informance" />
+            <div className="rightnav-search-container">
+              {/* <SearchIcon /> */}
+              <input
+                className="rightnav-input"
+                type="text"
+                placeholder="Search Informance"
+              />
             </div>
             <Link className="side-rightnav-link" to="/groups">
               {/* <PersonIcon fontSize="large" className="nav-icon" /> */}
+              {/* <ForumIcon /> */}
               <p className="side-rightnav-li">Community</p>
             </Link>
             <Link className="side-rightnav-link" to="/dating">
               {/* <PersonIcon fontSize="large" className="nav-icon" /> */}
+              {/* <FavoriteIcon /> */}
               <p className="side-rightnav-li">Dating</p>
             </Link>
             {/* <Link className="side-nav-link" to="/profile">

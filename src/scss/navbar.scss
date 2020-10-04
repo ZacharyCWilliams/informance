@@ -46,7 +46,9 @@ a {
 }
 
 .side-nav-link:hover {
-  border-radius: 40px;
+  // border-radius: 40px;
+  border-radius: 4px;
+  width: 80%;
   background-color: rgba(120, 18, 14, 0.322);
   color: rgb(212, 10, 3);
 }
