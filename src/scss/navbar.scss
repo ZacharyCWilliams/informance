@@ -1,28 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap");
+
+.left-navbar-section {
+  display: flex;
+  flex-direction: column;
+}
 
 .navbar-container {
-  width: 350px;
-  border-right: 1px solid white;
-  height: 100vh;
   display: flex;
   align-items: flex-start;
+  position: sticky;
+  top: 0;
+  flex-grow: 1;
 }
 
 .navbar-div {
-  margin-top: 30px;
+  position: sticky;
+  top: 0;
 }
 
 a {
   text-decoration: none;
   list-style-type: none;
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
 
 .side-nav-ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
 
 .side-nav-link {
@@ -41,7 +47,11 @@ a {
 
 .side-nav-link:hover {
   border-radius: 40px;
-  background-color:rgba(120, 18, 14, 0.322);
+  background-color: rgba(120, 18, 14, 0.322);
+  color: rgb(212, 10, 3);
+}
+
+.side-nav-link:focus {
   color: rgb(212, 10, 3);
 }
 
@@ -50,7 +60,6 @@ a {
 }
 
 .nav-icon:hover {
-  color: rgb(212, 10, 3);;
+  color: rgb(212, 10, 3);
   margin-right: 20px;
-  
 }
