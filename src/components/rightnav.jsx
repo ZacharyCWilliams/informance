@@ -11,6 +11,7 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import GroupIcon from "@material-ui/icons/Group";
+import ExploreIcon from "@material-ui/icons/Explore";
 
 
 export default function RightNav() {
@@ -32,7 +33,8 @@ export default function RightNav() {
             </div>
             <div className="pc-compass-container">
               <Link className="rightnav-dna-btn" to="/political-dna">
-                <h2>Take Political DNA Test</h2>
+                {/* <ExploreIcon className="rightnav-explore-icon" fontSize="large" /> */}
+                <h2 className="compass-btn">Political Compass</h2>
               </Link>
               {/* <h2 className="community-h2">Take Political DNA Test</h2> */}
               {/* <button className="pc-button">
