@@ -10,7 +10,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
-import FastfoodIcon from "@material-ui/icons/Fastfood";
+import GroupIcon from "@material-ui/icons/Group";
 
 
 export default function RightNav() {
@@ -27,13 +27,27 @@ export default function RightNav() {
               <input
                 className="rightnav-input"
                 type="text"
-                placeholder={`${searchIcon} Search Informance`}
+                placeholder="Search Informance"
               />
+            </div>
+            <div className="pc-compass-container">
+              <Link className="rightnav-dna-btn" to="/political-dna">
+                <h2>Take Political DNA Test</h2>
+              </Link>
+              {/* <h2 className="community-h2">Take Political DNA Test</h2> */}
+              {/* <button className="pc-button">
+                <h2 className="community-h2">Poltical DNA</h2>
+                <img
+                  src="https://i.imgur.com/stD0fhI.png"
+                  alt=""
+                  className="political-compass"
+                />
+              </button> */}
             </div>
             <div className="rightnav-middle-container">
               <h2 className="community-h2">Community</h2>
               <Link className="side-rightnav-link" to="/groups">
-                <ForumIcon className="right-nav-icon" />
+                <GroupIcon className="right-nav-icon" />
                 <p className="side-rightnav-li">Groups</p>
               </Link>
               <Link className="side-rightnav-link" to="/dating">
@@ -45,20 +59,9 @@ export default function RightNav() {
                 <p className="side-rightnav-li">Notifications</p>
               </Link>
               <Link className="side-rightnav-link" to="/messages">
-                <FastfoodIcon className="right-nav-icon" />
+                <ForumIcon className="right-nav-icon" />
                 <p className="side-rightnav-li">Messages</p>
               </Link>
-            </div>
-            <div className="pc-compass-container">
-              {/* <h2 className="community-h2">Take Political DNA Test</h2> */}
-              {/* <button className="pc-button">
-                <h2 className="community-h2">Poltical DNA</h2>
-                <img
-                  src="https://i.imgur.com/stD0fhI.png"
-                  alt=""
-                  className="political-compass"
-                />
-              </button> */}
             </div>
           </ul>
         </nav>

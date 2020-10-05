@@ -68,8 +68,10 @@
 .rightnav-middle-container {
   // box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   width: 80%;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #444444;
   padding-bottom: 15px;
+  border-top: 1px solid #444444;
+  margin-top: 20px;
 }
 
 .community-h2 {
@@ -81,6 +83,7 @@
   font-size: 25px;
   font-weight: 800;
   line-height: 1.3125;
+  letter-spacing: 1.5px;
 }
 
 .political-compass {
