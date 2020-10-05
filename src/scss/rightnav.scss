@@ -1,12 +1,27 @@
 .side-rightnav-li {
-  color: white;
+  color: #e4e6eb;
   display: flex;
   width: 100%;
   font-size: 22px;
+  padding: 10px;
+  margin: 0px;
 }
 
-.side-rightnav-li:hover {
-  background-color: white;
+// .side-rightnav-li:hover {
+//   background-color: rgba(255, 255, 255, .1);
+//   width: 100%;
+//   border-radius: 7px;
+// }
+
+.side-rightnav-link {
+  width: 100%;
+  display: flex;
+}
+
+.side-rightnav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  border-radius: 7px;
 }
 
 .side-rightnav-ul {
@@ -48,4 +63,47 @@
 .rightnav-input:focus {
   border: 1px solid crimson;
   background-color: #1C1C1C;
+}
+
+.rightnav-middle-container {
+  // box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  width: 80%;
+  border-bottom: 1px solid white;
+  padding-bottom: 15px;
+}
+
+.community-h2 {
+  // color: #B0B3B8;
+  color: white;
+  padding-left: 10px;
+  float: left;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.3125;
+}
+
+.political-compass {
+  width: 250px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.pc-button {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+  margin-left: -8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-compass-container {
+  margin-top: 15px;
+}
+
+.right-nav-icon {
+  color: white;
+  align-self: center;
+  padding-left: 10px;
 }
