@@ -11,9 +11,10 @@
 .navbar-container {
   display: flex;
   align-items: flex-start;
-  position: sticky;
-  top: 0;
   flex-grow: 1;
+  position: fixed;
+  top: 60px;
+  width: 280px;
 }
 
 .navbar-div {
@@ -38,12 +39,12 @@ a {
 }
 
 .side-nav-link {
-  color: white;
+  color: #e4e6eb;
   list-style-type: none;
   font-family: sans-serif;
   font-weight: 600;
   padding: 2px 18px;
-  font-size: 25px;
+  font-size: 22px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -59,8 +60,10 @@ a {
   // background-color: rgba(255, 0, 0, .1);
   // width: 90%;
   // border-radius: 7px;
-  background-color: rgba(0,0,0,.2);
-  box-shadow: inset 0 1px 2px 0 rgba(50,50,50,.2);
+  // background-color: rgba(0,0,0,.2);
+  // box-shadow: inset 0 1px 2px 0 rgba(50,50,50,.2);
+  // width: 87%;
+  background-color: rgba(255, 255, 255, 0.1);
   width: 87%;
 }
 

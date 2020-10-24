@@ -23,14 +23,14 @@ export default function RightNav() {
       <div className="right-nav-container">
         <nav className="right-nav-div">
           <ul className="side-rightnav-ul">
-            <div className="rightnav-search-container">
+            {/* <div className="rightnav-search-container"> */}
               {/* <SearchIcon /> */}
-              <input
+              {/* <input
                 className="rightnav-input"
                 type="text"
                 placeholder="Search Informance"
               />
-            </div>
+            </div> */}
             <div className="pc-compass-container">
               <Link className="rightnav-dna-btn" to="/political-dna">
                 {/* <ExploreIcon className="rightnav-explore-icon" fontSize="large" /> */}

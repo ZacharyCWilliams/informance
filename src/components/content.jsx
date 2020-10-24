@@ -12,29 +12,29 @@ import Polls from "./content/polls";
 import Trends from "./content/trends";
 import Profile from "./content/profile";
 
-export default function Content() {
+export default function Content({ title, setNavTitle }) {
   return (
     <Switch>
       <Route path="/news">
-        <News title="News" />
+        <News title="News" setNavTitle={setNavTitle} />
       </Route>
       <Route path="/trends">
-        <Trends title="Trends"  />
+        <Trends title="Trends" setNavTitle={setNavTitle}  />
       </Route>
       <Route exact path="/">
-        <Dashboard title="Home"  />
+        <Dashboard title="Home" setNavTitle={setNavTitle}  />
       </Route>
       <Route path="/elections">
-        <Elections title="Elections"  />
+        <Elections title="Elections" setNavTitle={setNavTitle}  />
       </Route>
       <Route path="/polls">
-        <Polls title="Polls"  />
+        <Polls title="Polls" setNavTitle={setNavTitle}  />
       </Route>
       <Route path="/law">
-        <Law title={`Judges & Law`}  />
+        <Law title={`Judges & Law`} setNavTitle={setNavTitle}  />
       </Route>
       <Route path="/profile">
-        <Profile title="Profile"  />
+        <Profile title="Profile" setNavTitle={setNavTitle}  />
       </Route>
     </Switch>
   )

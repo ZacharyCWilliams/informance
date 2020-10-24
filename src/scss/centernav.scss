@@ -1,5 +1,5 @@
 .center-nav-container {
-  height: 53px;
+  height: 60px;
   width: 100%;
   background-color: #232626;
   top: 0;
@@ -7,16 +7,120 @@
   // border-bottom: 1px solid #444444;
   // box-shadow: 0 9px 30px 0 rgba(0,0,0,.15);
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+  display: flex;
 }
 
 .center-nav-title {
   margin: 0px;
-  padding-top: 12px;
+  padding-top: 18px;
   display: flex;
-  margin-left: 17px;
+  // margin-left: 17px;
   color: white;
+  // color: #e4e6eb;
   font-family: sans-serif;
   font-size: 21px;
   font-weight: 800;
   line-height: 1.3125;
+  margin-left: 15px;
+}
+
+.center-nav-logo {
+  display: flex;
+  color: white;
+  font-size: 25px;
+  align-self: center;
+  margin-left: 25px;
+}
+
+.left-center-nav-section {
+  width: 280px;
+  display: flex;
+}
+
+.center-center-nav-section {
+  width: 812px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.placeholder-navigation {
+  width: 230px;
+}
+
+.right-center-nav-section {
+  width: 335px;
+  display: flex;
+  justify-content: center;
+}
+
+// .rightnav-search-container:focus-within {
+//   fill: crimson;
+// }
+
+.rightnav-search-container:hover {
+  border: 1px solid rgb(85, 0, 17);
+  background-color: #1c1c1c;
+}
+
+.rightnav-search-container:focus-within {
+  border: 1px solid crimson;
+  background-color: #1c1c1c;
+}
+
+.rightnav-search-container {
+  width: 400px;
+  height: 45px;
+  border-radius: 40px;
+  background-color: #3a3b3c;
+  color: #e4e6eb;
+  margin-top: 6px;
+  display: flex;
+}
+
+.rightnav-input {
+  width: 80%;
+  height: 45px;
+  padding: 0px 15px;
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 18px;
+  // border-radius: 40px;
+}
+
+.search-icon-center-nav {
+  align-self: center;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+.search-icon-center-nav:focus-within {
+  fill: crimson;
+}
+
+// .search-icon-center-nav:focus {
+//   color: red;
+// }
+
+.search-icon-center {
+  align-self: center;
+  color: grey;
+}
+
+.search-icon-center:hover {
+  align-self: center;
+}
+
+.search-icon-center:focus {
+  fill: crimson;
+}
+
+.nav-test:focus {
+  fill: crimson;
+}
+
+.search-icon-center-focus {
+  color: crimson;
+  align-self: center;
 }
