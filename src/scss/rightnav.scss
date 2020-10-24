@@ -38,12 +38,15 @@
 .right-nav-section {
   display: flex;
   flex-direction: column;
+  position: fixed;
+  right: 5px;
+  top: 60px;
 }
 
-.right-nav-div {
-  position: sticky;
-  top: 0;
-}
+// .right-nav-div {
+//   position: sticky;
+//   top: 0;
+// }
 
 .rightnav-search-container {
   width: 80%;
