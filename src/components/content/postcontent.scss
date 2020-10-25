@@ -14,10 +14,29 @@
   height: 100px;
 }
 
+.post-section-icon {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #cc0088;
+  cursor: pointer;
+  margin-right: 8px;
+  height: 50px;
+}
+
+.post-section-icon:hover {
+  background-color: rgba(242, 29, 231, 0.2);
+  border-radius: 70px;
+}
+
 .attachment-section {
   display: flex;
-  border: 1px solid white;
+  // border: 1px solid white;
+  align-self: center;
   height: 50px;
+  margin-right: 8px;
+  padding-left: 20px;
+  border-left: 1px solid #393a3c;
 }
 
 .profile-avatar {

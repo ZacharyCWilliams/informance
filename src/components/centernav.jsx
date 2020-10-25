@@ -15,6 +15,7 @@ import ChatBubbleOutlineOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineO
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import AddIcon from '@material-ui/icons/Add';
+import LocalPostOfficeOutlinedIcon from '@material-ui/icons/LocalPostOfficeOutlined';
 
 
 
@@ -56,7 +57,7 @@ export default function CenterNav( { title } ) {
           </span>
           <span className="nav-drop-span">
             <button className='nav-dropdown-button'>
-              <ChatBubbleOutlineOutlinedIcon className="messages-icon" />
+              <LocalPostOfficeOutlinedIcon className="messages-icon" />
             </button>
           </span>
           <span className="nav-drop-span">
