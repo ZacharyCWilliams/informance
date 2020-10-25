@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import CenterNav from "../centernav";
+import PostContent from "./postcontent";
 
 export default function Dashboard({ setNavTitle }) {
 
@@ -10,54 +11,7 @@ export default function Dashboard({ setNavTitle }) {
 
   return (
     <>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
-      <h1>asdfsdf</h1>
+     <PostContent />
     </>
   )
 }

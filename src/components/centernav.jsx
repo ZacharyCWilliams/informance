@@ -9,6 +9,13 @@ import InputLabel from '@material-ui/core/InputLabel';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
 import SearchBar from "./searchbar";
+// import ForumIcon from "@material-ui/icons/Forum";
+// import MessageIcon from '@material-ui/icons/Message';
+import ChatBubbleOutlineOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineOutlined';
+import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import AddIcon from '@material-ui/icons/Add';
+
 
 
 
@@ -41,7 +48,29 @@ export default function CenterNav( { title } ) {
         <h1 className="center-nav-title">{title}</h1>
 
         {/* Messages, Notifications, Settings, Add Channel */}
-        <img className="placeholder-navigation" src={Placeholder} alt="placeholder-nav"/>
+        <div className="placeholder-navigation">
+          <span className="nav-drop-span">
+            <button className='nav-dropdown-button'>
+              <AddIcon className="messages-icon" />
+            </button>
+          </span>
+          <span className="nav-drop-span">
+            <button className='nav-dropdown-button'>
+              <ChatBubbleOutlineOutlinedIcon className="messages-icon" />
+            </button>
+          </span>
+          <span className="nav-drop-span">
+            <button className='nav-dropdown-button'>
+              <NotificationsActiveIcon className="messages-icon" />
+            </button>
+          </span>
+          <span className="nav-drop-span">
+            <button className='nav-dropdown-button'>
+              <ArrowDropDownIcon className="messages-icon" />
+            </button>
+          </span>
+        </div>
+        {/* <img className="placeholder-navigation" src={Placeholder} alt="placeholder-nav"/> */}
       </div>
       <div className="right-center-nav-section">
         <form className="rightnav-search-container">

@@ -1,5 +1,5 @@
 .center-nav-container {
-  height: 60px;
+  height: 70px;
   width: 100%;
   background-color: #232626;
   top: 0;
@@ -12,7 +12,7 @@
 
 .center-nav-title {
   margin: 0px;
-  padding-top: 18px;
+  align-self: center;
   display: flex;
   // margin-left: 17px;
   color: white;
@@ -21,7 +21,7 @@
   font-size: 21px;
   font-weight: 800;
   line-height: 1.3125;
-  margin-left: 15px;
+  margin-left: 21px;
 }
 
 .center-nav-logo {
@@ -44,7 +44,7 @@
 }
 
 .placeholder-navigation {
-  width: 230px;
+  width: 250px;
 }
 
 .right-center-nav-section {
@@ -63,7 +63,8 @@
 }
 
 .rightnav-search-container:focus-within {
-  border: 1px solid crimson;
+  // border: 1px solid crimson;
+  border: 1px solid #cc0088;
   background-color: #1c1c1c;
 }
 
@@ -73,9 +74,8 @@
   border-radius: 40px;
   background-color: #3a3b3c;
   color: #e4e6eb;
-  margin-top: 6px;
   display: flex;
-  margin-left: 20px;
+  align-self: center;
 }
 
 .rightnav-input {
@@ -122,6 +122,39 @@
 }
 
 .search-icon-center-focus {
-  color: crimson;
+  // color: crimson;
+  color: #cc0088;
+  align-self: center;
+}
+
+.nav-drop-span {
+  align-self: center;
+
+}
+
+.nav-dropdown-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; 
+  background-color: rgb(57, 60, 60);
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  margin: 8px;
+  color:#e4e6eb;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-dropdown-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.placeholder-navigation {
+  display: flex;
+}
+
+.messages-icon {
   align-self: center;
 }

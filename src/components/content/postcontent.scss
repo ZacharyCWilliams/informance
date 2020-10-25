@@ -1,0 +1,50 @@
+.post-content-section {
+  border-bottom: 1px solid #393a3c;
+  // border-top: 1px solid #393a3c;
+  // border-right: 1px solid #393a3c;
+  height: 150px;
+  // background-color: #232626;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-section {
+  display: flex;
+  border-bottom: 1px solid #393a3c;
+  height: 100px;
+}
+
+.attachment-section {
+  display: flex;
+  border: 1px solid white;
+  height: 50px;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  align-self: center;
+      margin-left: 15px;
+}
+
+.post-input {
+  width: 100%;
+  height: 60px;
+  align-self: center;
+  margin-left: 15px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  color: white;
+}
+.post-input::placeholder {
+  color: #c8cbd3;
+}
+
+// rgb(57 58 60)
+
+// pink #cc0088
+
+//linear-gradient(90deg, rgba(255,255,255,1) -82%, rgba(204,0,136,1) 0%, rgba(204,0,136,1) 50%, rgba(220,20,60,1) 100%);
