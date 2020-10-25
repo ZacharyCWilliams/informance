@@ -14,6 +14,7 @@ export default function PostContent() {
         <div className="post-section">
           <img className="profile-avatar" src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" alt=""/>
           <input className="post-input" placeholder="What's happening?" type="text"/>
+          <button className="send-post-button">Post</button>
         <div className="attachment-section">
           <button className="post-section-icon">
             <ImageOutlinedIcon fontSize="large" />

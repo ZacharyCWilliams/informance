@@ -21,7 +21,7 @@
   color: #cc0088;
   cursor: pointer;
   margin-right: 8px;
-  height: 50px;
+  height: 45px;
 }
 
 .post-section-icon:hover {
@@ -60,6 +60,26 @@
 }
 .post-input::placeholder {
   color: #c8cbd3;
+}
+
+.send-post-button {
+  margin-right: 25px;
+  border: 1px solid #cc0088;
+  outline: none;
+  background-color: transparent;
+  width: 220px;
+  height: 40px;
+  align-self: center;
+  border-radius: 38px;
+  color: rgba(255, 255, 255, 0.589);
+  font-weight: 800;
+  font-size: 20px;
+  background-color: rgba(242, 29, 231, 0.2);
+}
+
+.send-post-button:hover {
+  background-color: #cc0088;
+  color: white;
 }
 
 // rgb(57 58 60)
