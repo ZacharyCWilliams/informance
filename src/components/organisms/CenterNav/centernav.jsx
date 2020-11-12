@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import "./centernav.module.scss";
+import styles from "./centernav.module.css";
 import { Link } from "react-router-dom"
 import SettingsIcon from '@material-ui/icons/Settings';
-import Placeholder from "../assets/placeholder-nav.png";
+import Placeholder from "../../../assets/placeholder-nav.png";
 import SearchIcon from '@material-ui/icons/Search';
 import InputLabel from '@material-ui/core/InputLabel';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
-import SearchBar from "../../searchbar";
+import SearchBar from "../../atoms/SearchBar/searchbar";
 // import ForumIcon from "@material-ui/icons/Forum";
 // import MessageIcon from '@material-ui/icons/Message';
 import ChatBubbleOutlineOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineOutlined';
@@ -33,7 +33,7 @@ export default function CenterNav( { title } ) {
   }
 
   return (
-    <nav className="center-nav-container">
+    <nav className={styles.container}>
       {/* <div>
         <p className="center-nav-logo">Informance</p>
       </div> */}

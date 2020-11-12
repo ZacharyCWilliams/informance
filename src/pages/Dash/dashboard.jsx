@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import CenterNav from "../centernav";
+import CenterNav from "../../components/organisms/CenterNav/index";
 import PostContent from "../Post/postcontent";
 
 export default function Dashboard({ setNavTitle }) {
