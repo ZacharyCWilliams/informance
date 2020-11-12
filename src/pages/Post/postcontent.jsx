@@ -13,7 +13,7 @@ export default function PostContent() {
       <section className="post-content-section">
         <div className="post-section">
           <img className="profile-avatar" src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" alt=""/>
-          <input className="post-input" placeholder="What's happening?" type="text"/>
+          <textarea className="post-input" placeholder="What's happening?" type="text"/>
           <button className="send-post-button">Post</button>
         <div className="attachment-section">
           <button className="post-section-icon">
@@ -22,9 +22,9 @@ export default function PostContent() {
           <button className="post-section-icon">
             <VideocamOutlinedIcon fontSize="large" />
           </button>
-          <button className="post-section-icon">
+          {/* <button className="post-section-icon">
             <GifOutlinedIcon fontSize="large" />
-          </button>
+          </button> */}
           <button className="post-section-icon">
             <ScheduleOutlinedIcon fontSize="large" />
           </button>

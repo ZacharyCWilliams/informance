@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import'../scss/home.scss';
-import Navbar from "./navbar";
-import Content from "./content";
-import RightNav from "./rightnav";
+import Navbar from "../../components/organisms/LeftNav/navbar";
+import Content from "../Content/content";
+import RightNav from "../../components/organisms/RightNav/rightnav";
 import CenterNav from "./centernav";
 
 export default function Home() {

@@ -4,13 +4,13 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Dashboard from "./content/dashboard";
-import Elections from "./content/elections";
-import Law from "./content/law";
-import News from "./content/news";
-import Polls from "./content/polls";
-import Trends from "./content/trends";
-import Profile from "./content/profile";
+import Dashboard from "../Dash/dashboard";
+import Elections from "../Elections/elections";
+import Law from "../Law/law";
+import News from "../News/news";
+import Polls from "../Polls/polls";
+import Trends from "../Trends/trends";
+import Profile from "../Profile/profile";
 
 export default function Content({ title, setNavTitle }) {
   return (

@@ -1,0 +1,5 @@
+Atoms are the basic building blocks of matter. 
+
+HTML elements like form label, inputs, or buttons
+
+Can also include color palettes, fonts, and even more invisible aspects of an interface like animations

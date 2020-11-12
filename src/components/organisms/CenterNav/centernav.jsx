@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import "../scss/centernav.scss";
+import "./centernav.module.scss";
 import { Link } from "react-router-dom"
 import SettingsIcon from '@material-ui/icons/Settings';
 import Placeholder from "../assets/placeholder-nav.png";
@@ -8,7 +8,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import InputLabel from '@material-ui/core/InputLabel';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
-import SearchBar from "./searchbar";
+import SearchBar from "../../searchbar";
 // import ForumIcon from "@material-ui/icons/Forum";
 // import MessageIcon from '@material-ui/icons/Message';
 import ChatBubbleOutlineOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineOutlined';
