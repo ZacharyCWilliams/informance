@@ -1,0 +1,15 @@
+.postbutton {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #cc0088;
+  cursor: pointer;
+  margin-right: 2px;
+  height: 45px;
+  align-self: center;
+}
+
+.postbutton:hover {
+  background-color: rgba(242, 29, 231, 0.2);
+  border-radius: 50%;
+}

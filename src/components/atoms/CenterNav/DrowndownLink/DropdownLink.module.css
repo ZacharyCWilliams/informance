@@ -1,0 +1,59 @@
+/* dropdown nav item button */
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.5s;
+  border-radius: 8px;
+}
+
+.container:hover {
+  background-color: #525352;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+}
+
+/* icon  */
+
+.icon {
+  width: 40px;
+  height: 40px;
+  color: #E4E6EB;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(57 60 60);
+}
+
+.icon > svg {
+  width: 40px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.title {
+  color: #E4E6EB;
+  display: flex;
+  margin: 0px;
+  font-size: 17px;
+}
+
+.tagline {
+  color: #B0B3B8;
+  font-size: 16px;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  text-align: left;
+}

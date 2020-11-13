@@ -1,0 +1,45 @@
+.sendPost {
+  margin-right: 20px;
+  margin-left: 10px;
+  border: 1px solid #cc0088;
+  outline: none;
+  background-color: transparent;
+  width: 120px;
+  height: 40px;
+  align-self: center;
+  border-radius: 38px;
+  color: rgba(255, 255, 255, 0.589);
+  font-weight: 800;
+  font-size: 20px;
+  background-color: rgba(242, 29, 231, 0.1);
+}
+
+.sendPost:hover {
+  background-color: #cc0088;
+  color: white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.continue {
+  color: #cc0088;
+  border-radius: 52%;
+  font-size: 3rem;
+}
+
+.continue:hover {
+  background-color: rgba(242, 29, 231, 0.1);
+}
+
+.cont {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-left: 1px solid #393a3c;
+  padding-left: 12px;
+}

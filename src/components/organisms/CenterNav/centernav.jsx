@@ -12,10 +12,12 @@ import SearchBar from "../../atoms/SearchBar/searchbar";
 // import ForumIcon from "@material-ui/icons/Forum";
 // import MessageIcon from '@material-ui/icons/Message';
 import ChatBubbleOutlineOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineOutlined';
-import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import AddIcon from '@material-ui/icons/Add';
-import LocalPostOfficeOutlinedIcon from '@material-ui/icons/LocalPostOfficeOutlined';
+// import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
+// import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+// import AddIcon from '@material-ui/icons/Add';
+// import LocalPostOfficeOutlinedIcon from '@material-ui/icons/LocalPostOfficeOutlined';
+// import Button from "../../atoms/Center-Nav-Button/Button";
+import ButtonPanel from "../../molecules/CenterNav-BtnPanel/ButtonPanel";
 
 
 
@@ -45,33 +47,10 @@ export default function CenterNav( { title } ) {
       {/* <Link className="center-nav-settings" to="/settings">
         <SettingsIcon fontSize="large"/>
       </Link> */}
-      <div className="center-center-nav-section">
-        <h1 className="center-nav-title">{title}</h1>
-
+      <div className={styles.centerContainer}>
+        <h1 className={styles.title}>{title}</h1>
         {/* Messages, Notifications, Settings, Add Channel */}
-        <div className="placeholder-navigation">
-          <span className="nav-drop-span">
-            <button className='nav-dropdown-button'>
-              <AddIcon className="messages-icon" />
-            </button>
-          </span>
-          <span className="nav-drop-span">
-            <button className='nav-dropdown-button'>
-              <LocalPostOfficeOutlinedIcon className="messages-icon" />
-            </button>
-          </span>
-          <span className="nav-drop-span">
-            <button className='nav-dropdown-button'>
-              <NotificationsActiveIcon className="messages-icon" />
-            </button>
-          </span>
-          <span className="nav-drop-span">
-            <button className='nav-dropdown-button'>
-              <ArrowDropDownIcon className="messages-icon" />
-            </button>
-          </span>
-        </div>
-        {/* <img className="placeholder-navigation" src={Placeholder} alt="placeholder-nav"/> */}
+        <ButtonPanel />
       </div>
       <div className="right-center-nav-section">
         <form className="rightnav-search-container">
