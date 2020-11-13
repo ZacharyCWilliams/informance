@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../../atoms/Center-Nav-Button/Button";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
@@ -36,45 +36,65 @@ const ButtonPanel = () => {
 
   // ]
 
-  const handleAddPage = () => {
+  document.body.addEventListener("click", () => {
+    setAddPage(false);
     setShowMessageCenter(false)
     setShowNotifications(false)
     setShowMenu(false)
-    setAddPage(!addPage)
+  })
+
+  
+
+  useEffect(() => {
+
+    // menu swapping logic
+  if (showMenu) {
+    setAddPage(false)
+    setShowNotifications(false)
+    setShowMessageCenter(false)
+    console.log("show menu: ", showMenu)
   }
 
-  const handleMessageCenterClick = () => {
+  if (addPage) {
+    setShowMessageCenter(false)
+    setShowNotifications(false)
+    setShowMenu(false)
+    console.log("add page: ", addPage)
+  }
+
+  if (showMessageCenter) {
     setAddPage(false)
     setShowNotifications(false)
     setShowMenu(false)
-    setShowMessageCenter(!showMessageCenter)
-    console.log(showMessageCenter)
+    console.log("show message center: ", showMessageCenter)
   }
 
-  const handleNotificationClick = () => {
-    setAddPage(!setShowNotifications)
-    console.log(showNotifications)
+  if (showNotifications) {
+    setShowMessageCenter(false)
+    setAddPage(false)
+    setShowMenu(false)
+    console.log("show notifications: ", showNotifications)
   }
 
-  const handleMenuClick = () => {
-    setAddPage(!setShowMenu)
-    console.log(showMenu)
-  }
+  }, [showMenu, addPage, showMessageCenter, showNotifications])
 
   return (
     <div className="placeholder-navigation">
       <span className="nav-drop-span">
-        <Button icon={<AddIcon />} onClick={handleAddPage} />
+        <Button icon={<AddIcon />} onClick={() => setAddPage(!addPage)} />
         {addPage ? <DropdownPanel navItems={addPageMenu} sectionTitle={"Create"} /> : null }
       </span>
       <span className="nav-drop-span">
-        <Button icon={<LocalPostOfficeOutlinedIcon />} onClick={handleMessageCenterClick} />
+        <Button icon={<LocalPostOfficeOutlinedIcon />} onClick={() => setShowMessageCenter(!showMessageCenter)} />
+        {showMessageCenter ? <DropdownPanel navItems={addPageMenu} sectionTitle={"Menu"} /> : null }
       </span>
       <span className="nav-drop-span">
-        <Button icon={<NotificationsActiveIcon />} onClick={handleNotificationClick} />
+        <Button icon={<NotificationsActiveIcon />} onClick={() => setShowNotifications(!showNotifications)} />
+        {showNotifications ? <DropdownPanel navItems={addPageMenu} sectionTitle={"Menu"} /> : null }
       </span>
       <span className="nav-drop-span">
-        <Button icon={<ArrowDropDownIcon />} onClick={handleMenuClick} />
+        <Button icon={<ArrowDropDownIcon />} onClick={() => setShowMenu(!showMenu)} />
+        {showMenu ? <DropdownPanel navItems={addPageMenu} sectionTitle={"Menu"} /> : null }
       </span>
     </div>
   )

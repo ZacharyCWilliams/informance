@@ -2,22 +2,30 @@
 
 .dropdown {
   top: 58px;
-  transform: translateX(-45%);
+  /* transform: translateX(-45%); */
   width: 350px;
   box-shadow: rgba(136, 153, 166, 0.2) 0px 0px 15px, rgba(136, 153, 166, 0.15) 0px 0px 3px 1px;
   position: absolute;
   overflow: hidden;
   border-radius: 8px;
   background-color: #232626;
+  transform: translate(-110px, 0px);
 }
 
 .sectionTitle {
+  border-bottom: 1px solid #393a3c;
   font-size: 30px;
   color: #E4E6EB;
   text-align: left;
-  margin-left: 15px;
-  margin-top: 5px;
   font-family: sans-serif;
   font-weight: 800;
-  margin-bottom: 5px;
+  margin-top: 20px;
+  padding-left: 25px;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+}
+
+/* dynamic section padding */
+.dynamic {
+  padding: 10px;
 }

@@ -13,7 +13,7 @@ const DropdownPanel = ({ navItems, sectionTitle }) => {
   return (
     <div className={styles.dropdown}> 
     <h2 className={styles.sectionTitle}>{sectionTitle ? sectionTitle : null}</h2>
-    <div>
+    <div className={styles.dynamic}>
       {content}
     </div>
     </div>
