@@ -6,7 +6,7 @@ const CenterDropPanel = (navItem) => {
   
   return (
     <div className={styles.container}>
-     
+      
     </div>
   )
 }

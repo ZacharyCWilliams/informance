@@ -1,14 +1,26 @@
 import React, { useState, useEffect } from "react";
 import Button from "../../atoms/Center-Nav-Button/Button";
+// menu icons
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import AddIcon from '@material-ui/icons/Add';
 import LocalPostOfficeOutlinedIcon from '@material-ui/icons/LocalPostOfficeOutlined';
 import DropdownPanel from "../../atoms/CenterNav/DropdownPanel/DropdownPanel"
+// add page icons
 import PostAddIcon from '@material-ui/icons/PostAdd';
 import BookOutlinedIcon from '@material-ui/icons/BookOutlined';
 import PaymentOutlinedIcon from '@material-ui/icons/PaymentOutlined';
 import SubjectOutlinedIcon from '@material-ui/icons/SubjectOutlined';
+import CameraAltOutlinedIcon from '@material-ui/icons/CameraAltOutlined';
+import CreateOutlinedIcon from '@material-ui/icons/CreateOutlined';
+
+// show menu icons
+
+import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
+import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
+import Brightness2OutlinedIcon from '@material-ui/icons/Brightness2Outlined';
+import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
+import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 
 const ButtonPanel = () => {
 
@@ -22,6 +34,8 @@ const ButtonPanel = () => {
     { title: "Story", tagline: "Share a story", icon: <BookOutlinedIcon fontSize="large" />, onClick: () => console.log("story button clicked") },
     { title: "Fundraiser", tagline: "Raise money for a cause you care about.", icon: <PaymentOutlinedIcon fontSize="large" />, onClick: () => console.log("fundraiser button clicked") },
     { title: "Petition", tagline: "Start a petition to build awareness and enact change.", icon: <SubjectOutlinedIcon fontSize="large" />, onClick: () => console.log("Petition button clicked") },
+    { title: "Blog", tagline: "Create a blog. Share insights and thoughts through writing.", icon: <CreateOutlinedIcon fontSize="large" />, onClick: () => console.log("Petition button clicked") },
+    { title: "Video Channel", tagline: "Create a video channel.", icon: <CameraAltOutlinedIcon fontSize="large" />, onClick: () => console.log("Petition button clicked") },
   ]
 
   // const messageCenterMenu = [
@@ -32,9 +46,13 @@ const ButtonPanel = () => {
 
   // ]
 
-  // const extraMenu = [
-
-  // ]
+  const extraMenu = [
+    { title: "Profile", tagline: "See your profile", icon: <AccountCircleOutlinedIcon fontSize="large" />, onClick: () => console.log("post button clicked") },
+    { title: "Dark Mode", tagline: "Toggle Dark Mode", icon: <Brightness2OutlinedIcon fontSize="large" />, onClick: () => console.log("story button clicked") },
+    { title: "Settings", tagline: "View Settings", icon: <SettingsOutlinedIcon fontSize="large" />, onClick: () => console.log("fundraiser button clicked") },
+    { title: "Help Center", tagline: "Need help? Try our support center.", icon: <HelpOutlineOutlinedIcon fontSize="large" />, onClick: () => console.log("Petition button clicked") },
+    { title: "Log Out", tagline: "We'll miss you.", icon: <ExitToAppOutlinedIcon fontSize="large" />, onClick: () => console.log("Petition button clicked") },
+  ]
 
   document.body.addEventListener("click", () => {
     setAddPage(false);
@@ -42,8 +60,6 @@ const ButtonPanel = () => {
     setShowNotifications(false)
     setShowMenu(false)
   })
-
-  
 
   useEffect(() => {
 
@@ -86,15 +102,15 @@ const ButtonPanel = () => {
       </span>
       <span className="nav-drop-span">
         <Button icon={<LocalPostOfficeOutlinedIcon />} onClick={() => setShowMessageCenter(!showMessageCenter)} />
-        {showMessageCenter ? <DropdownPanel navItems={addPageMenu} sectionTitle={"Menu"} /> : null }
+        {showMessageCenter ? <DropdownPanel navItems={addPageMenu} sectionTitle={"Messages"} /> : null }
       </span>
       <span className="nav-drop-span">
         <Button icon={<NotificationsActiveIcon />} onClick={() => setShowNotifications(!showNotifications)} />
-        {showNotifications ? <DropdownPanel navItems={addPageMenu} sectionTitle={"Menu"} /> : null }
+        {showNotifications ? <DropdownPanel navItems={addPageMenu} sectionTitle={"Notifications"} /> : null }
       </span>
       <span className="nav-drop-span">
         <Button icon={<ArrowDropDownIcon />} onClick={() => setShowMenu(!showMenu)} />
-        {showMenu ? <DropdownPanel navItems={addPageMenu} sectionTitle={"Menu"} /> : null }
+        {showMenu ? <DropdownPanel navItems={extraMenu} sectionTitle={"Menu"} /> : null }
       </span>
     </div>
   )
