@@ -1,0 +1,39 @@
+/* icon */
+
+/* .focused > svg {
+  color: #cc0088;
+}
+
+.normal {
+  color: #757584;
+} */
+
+.icon {
+  margin: 6px 8px 6px 10px;
+  color: #757584
+}
+
+/* search container */
+
+.container {
+  width: 280px;
+  height: 38px;
+  padding: 5px;
+  border-radius: 50px;
+  display: flex;
+  background-color: #3A3B3C;
+}
+
+/* .container:hover {
+  background-color: rgba(255, 255, 255, 0.205);
+} */
+
+/* search input */
+
+.searchInput {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #E4E6EB;
+}

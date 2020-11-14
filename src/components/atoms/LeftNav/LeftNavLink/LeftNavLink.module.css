@@ -1,0 +1,11 @@
+.link {
+  height: 35px;
+  display: flex;
+  padding: 10px;
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.link:hover {
+  background-color: #525352;
+}
