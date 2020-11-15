@@ -42,27 +42,51 @@ require("./passportConfig")(passport);
 
 // Routes
 app.post("/login", (req, res, next) => {
-  passport.authenticate("local", (err, user, info) => {
+  User.findOne({ email: req.body.data.email }, async (err, doc) => {
+    console.log("first findOne function")
     if (err) throw err;
-    if (!user) res.send("Can't find user");
-    else {
-      req.logIn(user, err => {
+    if (!doc) res.send("User doesn't exist")
+    if (doc) {
+     User.findOne({ email: req.body.data.email }, (err, user) => {
         if (err) throw err;
-        console.log("Successfully authenticated");
-        return res.redirect('/home');
-        res.send("Successfully authenticated");
+        if (!user) return done(null, false);
+        bcrypt.compare(req.body.data.password, user.password, (err, result) => {
+          if (err) throw err;
+          if (result) {
+            console.log("Successful login")
+            return user;
+          } else {
+            console.log("Unsuccessful login attempt")
+            return false
+          }
+        })
       })
     }
-  })(req, res, next)
+  })
 })
 
+// login with passport <== can upgrade to this later
+
+// app.post("/login", (req, res, next) => {
+//   passport.authenticate("local", (err, user, info) => {
+//     if (err) throw err;
+//     if (!user) res.send("Can't find user");
+//     else {
+//       req.logIn(user, err => {
+//         if (err) throw err;
+//         console.log("Successfully authenticated");
+//         return res.redirect('/home');
+//         res.send("Successfully authenticated");
+//       })
+//     }
+//   })(req, res, next)
+// })
+
 app.post("/register", (req, res) => {
-  console.log(req.body)
   User.findOne({ username: req.body.data.username }, async (err, doc) => {
     if (err) throw err;
     if (doc) res.send("Username taken")
     if (!doc) {
-      // need to hash password
       const encryptedPassword = await bcrypt.hash(req.body.data.password, 10);
       const newUser = new User({
         email: req.body.data.email,
