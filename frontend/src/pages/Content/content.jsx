@@ -20,7 +20,7 @@ export default function Content({ title, setNavTitle }) {
       <Route path="/login">
         <Login />
       </Route>
-      <Route exact path="/">
+      <Route path="/register">
         <Register />
       </Route>
       <Route path="/news">
