@@ -6,6 +6,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
+  const [username, setUsername] = useState("");
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
@@ -17,6 +18,7 @@ const Register = () => {
           email: email,
           password: password,
           confirmPass: confirmPass,
+          username: username,
           name: name,
           number: number
         },
@@ -35,6 +37,7 @@ const Register = () => {
         <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" type="text"/>
         <input value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" type="password"/>
         <input value={confirmPass} onChange={(e) => setConfirmPass(e.target.value)} placeholder="Confirm Password" type="text"/>
+        <input value={username} onChange={(e) => setUsername(e.target.value)} placeholder="@handle" type="text"/>
         <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Full Name" type="text"/>
         <input value={number} onChange={(e) => setNumber(e.target.value)} placeholder="Phone Number" type="text"/>
         <button onClick={(e) => registerUser(e)}>Welcome Back!</button>
