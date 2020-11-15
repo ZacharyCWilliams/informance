@@ -1,0 +1,6 @@
+.link {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 100px;
+}
