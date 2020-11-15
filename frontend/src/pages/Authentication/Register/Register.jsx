@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Register.module.css";
+import axios from "axios";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -8,13 +9,23 @@ const Register = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
-  const handleLogin = (e) => {
+  const registerUser = async (e) => {
     e.preventDefault();
-    console.log(email)
-    console.log(password)
-    console.log(confirmPass)
-    console.log(name)
-    console.log(number)
+    try { 
+      const res = await axios.post("http://localhost:4000/register", {
+        data: {
+          email: email,
+          password: password,
+          confirmPass: confirmPass,
+          name: name,
+          number: number
+        },
+        withCredentials: true
+      })
+      console.log(res)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
@@ -26,7 +37,7 @@ const Register = () => {
         <input value={confirmPass} onChange={(e) => setConfirmPass(e.target.value)} placeholder="Confirm Password" type="text"/>
         <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Full Name" type="text"/>
         <input value={number} onChange={(e) => setNumber(e.target.value)} placeholder="Phone Number" type="text"/>
-        <button onClick={(e) => handleLogin(e)}>Welcome Back!</button>
+        <button onClick={(e) => registerUser(e)}>Welcome Back!</button>
       </form>
     </div>
   )
