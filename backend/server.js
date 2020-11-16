@@ -43,7 +43,6 @@ require("./passportConfig")(passport);
 // Routes
 app.post("/login", (req, res, next) => {
   User.findOne({ email: req.body.data.email }, async (err, doc) => {
-    console.log("first findOne function")
     if (err) throw err;
     if (!doc) res.send("User doesn't exist")
     if (doc) {
@@ -54,10 +53,10 @@ app.post("/login", (req, res, next) => {
           if (err) throw err;
           if (result) {
             console.log("Successful login")
-            return user;
+            res.send(user);
           } else {
             console.log("Unsuccessful login attempt")
-            return false
+            res.send(false);
           }
         })
       })

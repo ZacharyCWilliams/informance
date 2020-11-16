@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Register.module.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
+
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -9,11 +11,15 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
+  const [userData, setUserData] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  let history = useHistory();
 
   const registerUser = async (e) => {
     e.preventDefault();
     try { 
-      const res = await axios.post("http://localhost:4000/register", {
+      const { data } = await axios.post("http://localhost:4000/register", {
         data: {
           email: email,
           password: password,
@@ -24,9 +30,11 @@ const Register = () => {
         },
         withCredentials: true
       })
-      console.log(res)
+      console.log(data)
+      if (data) setUserData(data);
     } catch (error) {
       console.log(error)
+      throw error;
     }
   }
 

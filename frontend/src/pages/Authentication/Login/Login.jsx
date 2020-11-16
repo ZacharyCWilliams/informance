@@ -1,28 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Login.module.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false)
+  const [userData, setUserData] = useState(null)
+  let history = useHistory();
 
 
   const loginUser = async (e) => {
     e.preventDefault();
     try { 
-      const res = await axios.post("http://localhost:4000/login", {
+      const { data } = await axios.post("http://localhost:4000/login", {
         data: {
           email: email,
           password: password
         },
         withCredentials: true
       })
-      console.log(res)
+      if (data) setUserData(data);
     } catch (error) {
       console.log(error)
+      throw error;
     }
   }
+
+  useEffect(() => {
+    if (userData) setLoggedIn(true);
+    if (loggedIn) {
+      history.push({
+        pathname: '/home',
+        state: { userData }
+      });
+    }
+  }, [userData, loggedIn])
 
   return (
     <div>

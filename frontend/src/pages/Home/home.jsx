@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import'./home.scss';
 // import Navbar from "../../components/organisms/LeftNav/navbar";
 import Content from "../Content/content";
@@ -15,8 +15,12 @@ import GavelIcon from '@material-ui/icons/Gavel';
 import PersonOutlineTwoToneIcon from '@material-ui/icons/PersonOutlineTwoTone';
 import BookTwoToneIcon from '@material-ui/icons/BookTwoTone';
 
-export default function Home() {
+import { useHistory } from "react-router-dom";
+
+export default function Home(props) {
   const [navTitle, setNavTitle] = useState("Home")
+  const [userData, setUserData] = useState(null)
+  let history = useHistory()
 
   const links = [
     { icon: <HomeWorkTwoToneIcon fontSize="large" />, title: "Home", path: "/home"},
@@ -28,6 +32,18 @@ export default function Home() {
     { icon: <PersonOutlineTwoToneIcon fontSize="large" />, title: "Profile", path: "/profile"},
     // { title: "Law", path: "/law"},
   ]
+
+  useEffect(() => {
+    console.log(history)
+  })
+
+  // useEffect(() => {
+  //   if (history.state.location) {     
+  //     const data = history.state.location.userData;
+  //     setUserData(data)
+  //     console.log(userData)
+  //   }
+  // }, [history])
 
   return (
     <section>

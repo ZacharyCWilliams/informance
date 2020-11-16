@@ -17,12 +17,6 @@ import Register from "../Authentication/Register/Register";
 export default function Content({ title, setNavTitle }) {
   return (
     <Switch>
-      <Route path="/login">
-        <Login />
-      </Route>
-      <Route path="/register">
-        <Register />
-      </Route>
       <Route path="/news">
         <News title="News" setNavTitle={setNavTitle} />
       </Route>
