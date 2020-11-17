@@ -8,8 +8,11 @@ import './App.css';
 
 function App() {
 
+  // background #36393f
+  // color #72767d
+
   return (
-    <div className="App">
+    
       <Switch>
          <Route path="/login">
           <Login />
@@ -21,8 +24,10 @@ function App() {
           <Home />
         </Route>
       </Switch>
-    </div>
   );
 }
 
 export default App;
+// <div className="App">
+{/* <Home /> */}
+    {/* </div> */}

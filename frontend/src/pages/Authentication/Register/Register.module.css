@@ -1,0 +1,233 @@
+.container {
+  /* background-color: #000; */
+  /* background-color: #FFDF18; */
+  /* background-color: #36393f; */
+  background-color: #f0f2f5;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formContainer {
+  position: fixed;
+  left: 235px;
+  top: 215px;
+  /* color: black; */
+  /* color: #72767d; */
+  /* background-color: #36393f; */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: 0 2px 10px 0 rgba(0,0,0,.2); */
+}
+
+.input {
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
+  height: 56px;
+  width: 335px;
+  outline: none;
+  border: none;
+  color: rgb(45, 49, 56);
+  margin: 10px 0px;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+/* .navbar {
+  padding-left: 36px;
+  padding-right: 36px;
+  background-color: #36393f;
+  display: flex;
+  height: 70px;
+
+} */
+
+.title {
+  line-height: 0;
+  margin-right: 24px;
+  /* color: rgb(45, 49, 56); */
+  color: black;
+  align-self: center;
+  display: flex;
+  font-size: 28px;
+}
+
+.margins {
+  width: 1024px;
+}
+
+.button {
+  /* background-color: black; */
+  /* color: white; */
+  /* color: black; */
+  /* color: rgb(45, 49, 56); */
+  /* color: rgb(0, 204, 153); */
+  color: #10c397;
+  height: 56px;
+  width: 355px;
+  outline: none;
+  border: none;
+  /* box-shadow: 0 2px 10px 0 rgba(0,0,0,.2); */
+  font-size: 20px;
+  margin-top: 10px;
+  border: 1px solid rgb(0, 204, 153);
+  background-color: transparent;
+  font-weight: 800;
+}
+
+.button:hover {
+  transition: background-color 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
+  background-color: rgb(0, 204, 153);
+  color: white;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);  
+  /* border: 1px solid black; */
+}
+
+.header {
+  font-size: 35px;
+  color: black;
+  margin: 0px;
+}
+
+.paragraph {
+  font-size: 25px;
+  color: black;
+}
+
+.register {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  padding: 0px 230px;
+  height: 90px;
+  z-index: 200;
+}
+
+.links {
+  align-self: center;
+}
+
+.link1 {
+  margin: 0px 5px;
+  letter-spacing: 0.72px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: normal;
+  border: 1px solid rgba(0,0,0,0.15);
+  color: #000;
+  background-color: transparent;
+  height: 35px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.link1:hover {
+  background-color: rgba(0,0,0,0.03);
+}
+
+.link2 {
+  margin: 0px 15px;
+  letter-spacing: 0.72px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: normal;
+  border: 1px solid rgba(0,0,0,0.15);
+  background-color: #000;
+  color: white;
+  height: 35px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+/* text-overflow: ellipsis;
+    width: 100%;
+    color: rgb(45, 49, 56);
+    font-family: PostmatesStd, "Helvetica Neue", Helvetica;
+    font-size: 16px;
+    letter-spacing: 0.14px;
+    font-weight: 400;
+    line-height: normal;
+    padding: 12px 8px;
+    border: none; */
+
+
+
+
+/* 
+    font-family: PostmatesStd, "Helvetica Neue", Helvetica;
+    font-size: 16px;
+    letter-spacing: 0.14px;
+    font-weight: 400;
+    line-height: normal;
+    background-color: rgb(255, 255, 255);
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased; */
+
+    .registerFormContainer {
+      width: 100vw;
+      height: 100vh;
+      z-index: 100;
+      background-color: rgba(255,255,255,.65);
+    }
+
+    .registerForm {
+      display: flex;
+      flex-direction: column;
+      right: 200px;
+      position: absolute;
+      top: 150px;
+    }
+
+    .registerInput {
+      box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
+      height: 56px;
+      width: 335px;
+      outline: none;
+      border: none;
+      color: rgb(45, 49, 56);
+      margin: 10px 0px;
+      padding-left: 20px;
+      font-size: 16px;
+    }
+
+/* register user button     */
+
+.registerUserButton {
+  height: 56px;
+  outline: none;
+  border: 1px solid black;
+  color: rgb(45, 49, 56);
+  margin: 10px 0px;
+  font-size: 25px;
+  font-weight: 800;
+  background-color: transparent;
+}
+
+.registerUserButton:hover {
+  background-color: black;
+  color: white;
+}

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import styles from "./Login.module.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import LockTwoToneIcon from '@material-ui/icons/LockTwoTone';
+import AccountCircleTwoToneIcon from '@material-ui/icons/AccountCircleTwoTone';
+import { Link } from "react-router-dom";
 
 const Login = () => {
 
@@ -40,14 +43,29 @@ const Login = () => {
   }, [userData, loggedIn])
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form>
-        <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" type="text"/>
-        <input value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" type="password"/>
-        <button onClick={(e) => loginUser(e)}>Welcome Back!</button>
-      </form>
+    <div className={styles.container}>
+      <div className={styles.navbar}>
+        <h2 className={styles.title}>
+          Informance
+        </h2>
+        <div className={styles.links}>
+          <Link className={styles.link1} to="/login">LOG IN</Link>
+          <Link className={styles.link2} to="/register">SIGN UP</Link>
+        </div>
+      </div>
+      {/* <div className={styles.margins}> */}
+      <div className={styles.formContainer}>
+        <h2 className={styles.header}>Be informed. Be influential.</h2>
+        <p className={styles.paragraph}>We missed you! Sign back into informance below.</p>
+        <form className={styles.form}>
+          <input className={styles.input} value={email} onChange={(e) => setEmail(e.target.value)} placeholder={"Email"} type="text"/>
+          <input className={styles.input} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" type="password"/>
+          <button className={styles.button} onClick={(e) => loginUser(e)}>Welcome Back!</button>
+          {/* <Link to="/register" className={styles.register}>Don't have an account? Register here.</Link> */}
+        </form>
+      </div>
     </div>
+    // </div>
   )
 }
 
