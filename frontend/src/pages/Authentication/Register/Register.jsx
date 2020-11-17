@@ -55,7 +55,7 @@ const Register = () => {
             <input className={styles.registerInput} value={username} onChange={(e) => setUsername(e.target.value)} placeholder="@handle" type="text"/>
             <input className={styles.registerInput} value={name} onChange={(e) => setName(e.target.value)} placeholder="Full Name" type="text"/>
             <input className={styles.registerInput} value={number} onChange={(e) => setNumber(e.target.value)} placeholder="Phone Number" type="text"/>
-          <button className={styles.registerUserButton} onClick={(e) => registerUser(e)}>Sign Up</button>
+          <button className={styles.registerUserButton} onClick={(e) => registerUser(e)}>Create</button>
         </form>
       </div>
       <div className={styles.navbar}>
