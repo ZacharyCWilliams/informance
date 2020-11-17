@@ -228,6 +228,6 @@
 }
 
 .registerUserButton:hover {
-  background-color: black;
+  background-color: #000000b5;
   color: white;
 }

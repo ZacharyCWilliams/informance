@@ -44,7 +44,7 @@ require("./passportConfig")(passport);
 app.post("/login", (req, res, next) => {
   User.findOne({ email: req.body.data.email }, async (err, doc) => {
     if (err) throw err;
-    if (!doc) res.send("User doesn't exist")
+    if (!doc) res.send(400)
     if (doc) {
      User.findOne({ email: req.body.data.email }, (err, user) => {
         if (err) throw err;
@@ -84,7 +84,7 @@ app.post("/login", (req, res, next) => {
 app.post("/register", (req, res) => {
   User.findOne({ username: req.body.data.username }, async (err, doc) => {
     if (err) throw err;
-    if (doc) res.send("Username taken")
+    if (doc) res.send(400)
     if (!doc) {
       const encryptedPassword = await bcrypt.hash(req.body.data.password, 10);
       const newUser = new User({

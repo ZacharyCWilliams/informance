@@ -33,8 +33,12 @@ const Login = () => {
   }
 
   useEffect(() => {
-    if (userData) setLoggedIn(true);
+    if (userData) {
+      console.log(userData)
+      setLoggedIn(true);
+    }
     if (loggedIn) {
+      console.log("user data", userData)
       history.push({
         pathname: '/home',
         state: { userData }
