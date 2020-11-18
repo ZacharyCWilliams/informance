@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "../../atoms/Center-Nav-Button/Button";
+import { useHistory } from "react-router-dom";
 // menu icons
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
@@ -45,13 +46,19 @@ const ButtonPanel = () => {
   // const notificationMenu = [
 
   // ]
+  // let history = useHistory();
+
+  // const logoutUser = () => {
+  //   localStorage.clear();
+  //   history.push("/login")
+  // }
 
   const extraMenu = [
     { title: "Profile", tagline: "See your profile", icon: <AccountCircleOutlinedIcon fontSize="large" />, onClick: () => console.log("post button clicked") },
     { title: "Dark Mode", tagline: "Toggle Dark Mode", icon: <Brightness2OutlinedIcon fontSize="large" />, onClick: () => console.log("story button clicked") },
     { title: "Settings", tagline: "View Settings", icon: <SettingsOutlinedIcon fontSize="large" />, onClick: () => console.log("fundraiser button clicked") },
     { title: "Help Center", tagline: "Need help? Try our support center.", icon: <HelpOutlineOutlinedIcon fontSize="large" />, onClick: () => console.log("Petition button clicked") },
-    { title: "Log Out", tagline: "We'll miss you.", icon: <ExitToAppOutlinedIcon fontSize="large" />, onClick: () => console.log("Petition button clicked") },
+    { title: "Log Out", tagline: "We'll miss you.", icon: <ExitToAppOutlinedIcon fontSize="large" />, onClick: () => console.log("logout clicked") },
   ]
 
   document.body.addEventListener("click", () => {
