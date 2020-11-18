@@ -33,6 +33,8 @@ export default function Home(props) {
     // { title: "Law", path: "/law"},
   ]
 
+ 
+
   useEffect(() => {
     console.log(history)
   })
