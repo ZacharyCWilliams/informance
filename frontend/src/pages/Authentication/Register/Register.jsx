@@ -3,7 +3,7 @@ import styles from "./Register.module.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import Joi from "joi-browser";
 
 
 const Register = () => {
@@ -15,11 +15,26 @@ const Register = () => {
   const [number, setNumber] = useState("");
   const [userData, setUserData] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [emailError, setEmailError] = useState(null)
+  const [passwordError, setPasswordError] = useState(null)
+  const [usernameError, setUsernameError] = useState(null)
+  const [confirmPassError, setConfirmPassError] = useState(null)
+  const [nameError, setNameError] = useState(null)
+  const [numberError, setNumberError] = useState(null)
 
   let history = useHistory();
 
   const registerUser = async (e) => {
     e.preventDefault();
+    let errors = await validate()
+    if (errors) {
+      setEmailError(errors.email)
+      setPasswordError(errors.password)
+      setConfirmPassError(errors.confirmPass)
+      setUsernameError(errors.username)
+      setNameError(errors.name)
+      setNumberError(errors.number)
+    }
     try { 
       const { data } = await axios.post("http://localhost:4000/register", {
         data: {
@@ -40,6 +55,33 @@ const Register = () => {
     }
   }
 
+    // joi validations
+   
+  const schema = Joi.object().keys({ 
+    email: Joi.string().required().label("Email"),
+    password: Joi.string().required().label("Password"),
+    confirmPass: Joi.string().required().label("Re-enter Password"),
+    username: Joi.string().required().label("@handle"),
+    name: Joi.string().required().label("Full Name"),
+    number: Joi.number().required().label("Phone Number")
+  }); 
+
+  const validate = () => {
+    const fields = { email, password, confirmPass, username, name, number };
+    const { error } = Joi.validate(fields, schema); 
+
+    if (!error) return null;
+    const errors = {};
+    for (let item of error.details) {
+      errors[item.path[0]] = item.message;
+    }
+    if (errors.length !== 0) {
+      return errors
+    }
+  }
+
+
+
   return (
 
     // <div>
@@ -49,6 +91,12 @@ const Register = () => {
     <div className={styles.container}>
       <div className={styles.registerFormContainer}>
         <form className={styles.registerForm}>
+        {emailError && <p className={styles.errorMessage}>{emailError}</p>}
+        {passwordError && <p className={styles.errorMessage}>{passwordError}</p>}
+        {usernameError && <p className={styles.errorMessage}>{usernameError}</p>}
+        {confirmPassError && <p className={styles.errorMessage}>{confirmPassError}</p>}
+        {nameError && <p className={styles.errorMessage}>{nameError}</p>}
+        {number && <p className={styles.errorMessage}>{number}</p>}
             <input className={styles.registerInput} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" type="text"/>
             <input className={styles.registerInput} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" type="password"/>
             <input className={styles.registerInput} value={confirmPass} onChange={(e) => setConfirmPass(e.target.value)} placeholder="Confirm Password" type="text"/>

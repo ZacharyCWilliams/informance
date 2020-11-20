@@ -163,6 +163,11 @@
   padding-bottom: 7px;
 }
 
+.errorMessage {
+  color: red;
+  font-size: 18px;
+}
+
 /* text-overflow: ellipsis;
     width: 100%;
     color: rgb(45, 49, 56);

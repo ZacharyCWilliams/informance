@@ -199,7 +199,7 @@
       flex-direction: column;
       right: 200px;
       position: absolute;
-      top: 150px;
+      top: 110px;
     }
 
     .registerInput {
@@ -230,4 +230,9 @@
 .registerUserButton:hover {
   background-color: #000000b5;
   color: white;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 18px;
 }

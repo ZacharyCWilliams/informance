@@ -56,7 +56,7 @@ app.post("/login", (req, res, next) => {
             res.send(user);
           } else {
             console.log("Unsuccessful login attempt")
-            res.send(false);
+            res.send(400);
           }
         })
       })
