@@ -60,10 +60,10 @@ const Register = () => {
   const schema = Joi.object().keys({ 
     email: Joi.string().required().label("Email"),
     password: Joi.string().required().label("Password"),
-    confirmPass: Joi.string().required().label("Re-enter Password"),
+    confirmPass: Joi.string().required().label("Confirm Password"),
     username: Joi.string().required().label("@handle"),
     name: Joi.string().required().label("Full Name"),
-    number: Joi.number().required().label("Phone Number")
+    number: Joi.string().required().label("Phone Number")
   }); 
 
   const validate = () => {
@@ -96,7 +96,7 @@ const Register = () => {
         {usernameError && <p className={styles.errorMessage}>{usernameError}</p>}
         {confirmPassError && <p className={styles.errorMessage}>{confirmPassError}</p>}
         {nameError && <p className={styles.errorMessage}>{nameError}</p>}
-        {number && <p className={styles.errorMessage}>{number}</p>}
+        {numberError && <p className={styles.errorMessage}>{numberError}</p>}
             <input className={styles.registerInput} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" type="text"/>
             <input className={styles.registerInput} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" type="password"/>
             <input className={styles.registerInput} value={confirmPass} onChange={(e) => setConfirmPass(e.target.value)} placeholder="Confirm Password" type="text"/>
