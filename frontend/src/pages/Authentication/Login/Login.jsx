@@ -6,6 +6,7 @@ import LockTwoToneIcon from '@material-ui/icons/LockTwoTone';
 import AccountCircleTwoToneIcon from '@material-ui/icons/AccountCircleTwoTone';
 import { Link } from "react-router-dom";
 import Joi from "joi-browser";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 const Login = () => {
 
@@ -16,7 +17,7 @@ const Login = () => {
   const [emailError, setEmailError] = useState(null)
   const [passwordError, setPasswordError] = useState(null)
   let history = useHistory();
-
+  useDocumentTitle("Informance | Login")
 
   const loginUser = async (e) => {
     e.preventDefault();

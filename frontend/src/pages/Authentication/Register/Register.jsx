@@ -4,6 +4,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Joi from "joi-browser";
+import useDocumentTitle from "../../../hooks/useDocumentTitle";
 
 
 const Register = () => {
@@ -23,6 +24,7 @@ const Register = () => {
   const [numberError, setNumberError] = useState(null)
 
   let history = useHistory();
+  useDocumentTitle("Informance | Register")
 
   const registerUser = async (e) => {
     e.preventDefault();

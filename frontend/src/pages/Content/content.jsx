@@ -11,6 +11,7 @@ import News from "../News/news";
 import Polls from "../Polls/polls";
 import Trends from "../Trends/trends";
 import Profile from "../Profile/profile";
+import Lists from "../Lists/Lists";
 import Login from "../Authentication/Login/Login";
 import Register from "../Authentication/Register/Register";
 
@@ -34,6 +35,9 @@ export default function Content({ title, setNavTitle }) {
       </Route>
       <Route path="/law">
         <Law title={`Judges & Law`} setNavTitle={setNavTitle}  />
+      </Route>
+      <Route path="/lists">
+        <Lists title={`Lists`} setNavTitle={setNavTitle}  />
       </Route>
       <Route path="/profile">
         <Profile title="Profile" setNavTitle={setNavTitle}  />

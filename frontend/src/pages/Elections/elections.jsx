@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import CenterNav from "../../components/organisms/CenterNav/index";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 export default function Elections({ setNavTitle }) {
 
+  useDocumentTitle(`Elections | Informance`)
   useEffect(() => {
-    document.title = `Elections | Informance`;
     setNavTitle("Elections")
   });
 
