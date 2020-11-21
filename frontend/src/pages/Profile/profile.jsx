@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import CenterNav from "../../components/organisms/CenterNav/index";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import styles from "./profile.module.css";
+import EditProfile from "../EditProfile/EditProfile";
 
 export default function Profile({ setNavTitle }) {
+
+  const [editProfile, setEditProfile] = useState(false)
 
   useDocumentTitle(`Profile | Informance`);
   useEffect(() => {
@@ -13,12 +16,13 @@ export default function Profile({ setNavTitle }) {
   return (
     <div className={styles.container}>
       {/* <CenterNav title={"Profile"} /> */}
+      {editProfile && <EditProfile />}
     <div className={styles.coverPhotoContainer}>
         <img className={styles.coverPhoto} src="https://images.pexels.com/photos/2441454/pexels-photo-2441454.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""/>
     </div>
 
     <img className={styles.profilePhoto} src="https://pbs.twimg.com/profile_images/1218653607479762944/0O51r6lq_400x400.jpg" alt=""/>
-    <button className={styles.editButton}>Edit Profile</button>
+    <button onClick={() => setEditProfile(true)} className={styles.editButton}>Edit Profile</button>
 
     <div className={styles.infoContainer}>
       <h2 className={styles.name}>Zachary Williams</h2>
