@@ -42,10 +42,10 @@ export default function Profile({ setNavTitle }) {
         </div>
       </div>
       <div className={styles.buttonSection}>
-        <button>Posts</button>
-        <button>Comments</button>
-        <button>Media</button>
-        <button>Likes</button>
+        <button className={styles.bottomButton}>Posts</button>
+        <button className={styles.bottomButton}>Comments</button>
+        <button className={styles.bottomButton}>Media</button>
+        <button className={styles.bottomButton}>Likes</button>
       </div>
     </div>
     </div>

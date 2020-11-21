@@ -25,19 +25,21 @@
 
 .buttonSection {
   display: flex;
+  height: 52px;
 }
 
 /* elements */
 
 .coverPhoto {
-  height: 225px;
+  width: 100%;
+  max-height: 225px;
 }
 
 .name {
   color: white;
   margin: 0px;
   font-weight: 700;
-  margin-top: 60px;
+  margin-top: 85px;
   margin-left: 15px;
   line-height: 1.3125;
 }
@@ -117,4 +119,52 @@
   display: flex;
   align-self: center;
   margin-top: -10px;
+}
+
+.editButton {
+  margin: 0px 5px;
+  letter-spacing: 0.72px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: normal;
+  border: 1px solid #cc0088;
+  color: #cc0088;
+  background-color: transparent;
+  height: 45px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 35px;
+  cursor: pointer;
+  text-decoration: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  position: absolute;
+  right: 450px;
+  top: 320px;
+  outline: none;
+}
+
+.editButton:hover {
+  background-color: #cc008829;
+}
+
+.bottomButton {
+  background-color: transparent;
+  border: none;
+  width: 157.5px;
+  color: #e4e6ebc7;
+  font-weight: 800;
+  font-size: 18px;
+  outline: none;
+}
+
+.bottomButton:hover {
+  cursor: pointer;
+  background-color: #cc008829;
+  color: #cc0088;
+}
+
+.bottomButton:focus {
+  color: #cc0088;
+  border-bottom: 2px solid #cc0088;
 }
