@@ -101,7 +101,8 @@ app.post("/register", (req, res) => {
 })
 
 app.get("/user", (req, res) => {
-  console.log(req.body)
+  console.log(req)
+  res.send(req.user)
 })
 
 // Start Server

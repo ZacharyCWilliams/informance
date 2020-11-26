@@ -1,22 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import CenterNav from "../../components/organisms/CenterNav/index";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import styles from "./profile.module.css";
 import EditProfile from "../EditProfile/EditProfile";
+import useClickOutside from "../../hooks/useClickOutside";
+import axios from "axios";
 
-export default function Profile({ setNavTitle }) {
-
+export default function Profile({ setNavTitle, userData }) {
+  const ref = useRef();
   const [editProfile, setEditProfile] = useState(false)
 
   useDocumentTitle(`Profile | Informance`);
   useEffect(() => {
     setNavTitle("Profile")
+    console.log(userData)
   });
 
+  useClickOutside(ref, () => setEditProfile(false));
+
+  //  const getUserInfo = async () => {
+  //    console.log("local storage", localStorage)
+  //   try { 
+  //     const { data } = await axios.post("http://localhost:4000/user")
+  //     console.log(data)
+  //   } catch (error) {
+  //     console.log(error)
+  //     throw error;
+  //   }
+  // }
+
+  // getUserInfo();
   return (
     <div className={styles.container}>
       {/* <CenterNav title={"Profile"} /> */}
-      {editProfile && <EditProfile />}
+      {editProfile && 
+      <div ref={ref}>
+        <EditProfile />
+      </div>}
     <div className={styles.coverPhotoContainer}>
         <img className={styles.coverPhoto} src="https://images.pexels.com/photos/2441454/pexels-photo-2441454.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""/>
     </div>
@@ -38,11 +58,11 @@ export default function Profile({ setNavTitle }) {
       <div className={styles.followSection}>
         <div className={styles.followSectionDiv}>
           <p className={styles.followParagraph}>1200 </p>
-          <p classname={styles.wordFolllow}>Following</p>
+          <p className={styles.wordFollow}>Following</p>
         </div>
         <div className={styles.followSectionDiv}>
           <p className={styles.followParagraph}>10,000,000</p> 
-          <p classname={styles.wordFollow}>Followers</p>
+          <p className={styles.wordFollow}>Followers</p>
         </div>
       </div>
       <div className={styles.buttonSection}>

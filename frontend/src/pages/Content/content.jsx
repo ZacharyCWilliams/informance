@@ -15,32 +15,33 @@ import Lists from "../Lists/Lists";
 import Login from "../Authentication/Login/Login";
 import Register from "../Authentication/Register/Register";
 
-export default function Content({ title, setNavTitle }) {
+export default function Content({ title, setNavTitle, userData }) {
+  console.log(userData)
   return (
     <Switch>
       <Route path="/news">
-        <News title="News" setNavTitle={setNavTitle} />
+        <News title="News" setNavTitle={setNavTitle} userData={userData} />
       </Route>
       <Route path="/discover">
-        <Trends title="Discover" setNavTitle={setNavTitle}  />
+        <Trends title="Discover" setNavTitle={setNavTitle} userData={userData}  />
       </Route>
       <Route path="/home">
-        <Dashboard title="Home" setNavTitle={setNavTitle}  />
+        <Dashboard title="Home" setNavTitle={setNavTitle} userData={userData}  />
       </Route>
       <Route path="/elections">
-        <Elections title="Elections" setNavTitle={setNavTitle}  />
+        <Elections title="Elections" setNavTitle={setNavTitle} userData={userData}  />
       </Route>
       <Route path="/polls">
-        <Polls title="Polls" setNavTitle={setNavTitle}  />
+        <Polls title="Polls" setNavTitle={setNavTitle} userData={userData}  />
       </Route>
       <Route path="/law">
-        <Law title={`Judges & Law`} setNavTitle={setNavTitle}  />
+        <Law title={`Judges & Law`} setNavTitle={setNavTitle} userData={userData}  />
       </Route>
       <Route path="/lists">
-        <Lists title={`Lists`} setNavTitle={setNavTitle}  />
+        <Lists title={`Lists`} setNavTitle={setNavTitle} userData={userData}  />
       </Route>
       <Route path="/profile">
-        <Profile title="Profile" setNavTitle={setNavTitle}  />
+        <Profile title="Profile" setNavTitle={setNavTitle} userData={userData}  />
       </Route>
     </Switch>
   )

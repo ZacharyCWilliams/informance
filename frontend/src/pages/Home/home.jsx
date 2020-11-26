@@ -35,17 +35,16 @@ export default function Home(props) {
 
  
 
-  useEffect(() => {
-    console.log(history)
-  })
-
   // useEffect(() => {
-  //   if (history.state.location) {     
-  //     const data = history.state.location.userData;
-  //     setUserData(data)
-  //     console.log(userData)
-  //   }
-  // }, [history])
+  //   console.log(history)
+  // })
+
+  useEffect(() => {
+    if (history.state) {     
+      const data = history.state.location.userData;
+      setUserData(data)
+    }
+  }, [history])
 
   return (
     <section>
@@ -56,7 +55,7 @@ export default function Home(props) {
           <LeftNav links={links} />
         </section>
         <section className="content-section">
-          <Content title={navTitle} setNavTitle={setNavTitle} />
+          <Content title={navTitle} setNavTitle={setNavTitle} userData={userData} />
         </section>
         <section className="right-nav-section">
           {/* <RightNav /> */}

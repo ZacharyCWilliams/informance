@@ -21,7 +21,7 @@ const LeftNav = ({ links }) => {
   const [buttonText, setButtonText] = useState("See More")
 
   const panel = links.map((link) => {
-    return <LeftNavLink icon={link.icon} title={link.title} path={link.path} />
+    return <LeftNavLink icon={link.icon} title={link.title} path={link.path} key={link.title} />
   })  
 
    const links2 = [
